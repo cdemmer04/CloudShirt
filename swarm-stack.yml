@@ -3,7 +3,7 @@ version: "3.8"
 services:
 
   eshopwebmvc:
-    image: ${DOCKER_REGISTRY}:eshopwebmvc
+    image: ${DOCKER_REGISTRY}/eshopwebmvc:latest
     depends_on:
       - sqlserver
     deploy:
@@ -18,7 +18,7 @@ services:
         mode: host
 
   eshoppublicapi:
-    image: ${DOCKER_REGISTRY}:eshoppublicapi
+    image: ${DOCKER_REGISTRY}/eshoppublicapi:latest
     depends_on:
       - sqlserver
     deploy:
