@@ -12,7 +12,10 @@ services:
         constraints:
           - node.role == worker
     ports:
-      - "5601:80"
+      - target: 80
+        published: 5601
+        protocol: tcp
+        mode: host
 
   eshoppublicapi:
     image: ${DOCKER_REGISTRY}:eshoppublicapi
