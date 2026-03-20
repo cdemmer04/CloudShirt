@@ -27,14 +27,14 @@ services:
         constraints:
           - node.role == worker
 
-  # sqlserver:
-  #   image: mcr.microsoft.com/azure-sql-edge:latest
-  #   environment:
-  #     SA_PASSWORD: "@someThingComplicated1234"
-  #     ACCEPT_EULA: "Y"
-  #   ports:
-  #     - "1433:1433"
-  #   deploy:
-  #     placement:
-  #       constraints:
-  #         - node.role == worker
+  sqlserver:
+    image: mcr.microsoft.com/azure-sql-edge:latest
+    environment:
+      SA_PASSWORD: "@someThingComplicated1234"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    deploy:
+      placement:
+        constraints:
+          - node.role == worker
